@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfólio</title>
+</head>
+
+<body>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="./img/ImagePerfil.jpg" alt="Foto de perfil" class="foto-perfil">
+        <h1>Mateus Costa Brito</h1>
+        <p class="cabecalho-sub-titulo">Desenvolvedor Web</p>
+
+        <div class="linguaguens">
+            <img src="./img/js.png" alt="JavaScript" class="JS">
+            <img src="./img/html.png" alt="JavaScript" class="HTML">
+            <img src="./img/css.png" alt="CSS" class="CSS">
+        </div>
+
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre mim</h2>
+        <div class="sobre-caixa">
+            <div>
+                <img src="./img/Perfil2.png" alt="imageSobre" class="sobre-image">
+            </div>
+            <div class="sobre-caixa-paragrafo">
+                <p class="sobre-paragrafo">
+                    Sou Mateus Costa Brito, tenho 20 anos e sou natural de Manaus - AM.
+                    Desde cedo, sempre fui curioso sobre o funcionamento da tecnologia e o impacto que ela tem no nosso
+                    dia a dia. Essa curiosidade evoluiu para uma verdadeira paixão pelo desenvolvimento web, área na
+                    qual venho me dedicando e aprimorando continuamente.
+                    <br />
+                    <br />
+                    Sou formado em Técnico em Informática pelo SENAC, onde adquiri uma base sólida em lógica de
+                    programação, manutenção de sistemas e redes de computadores. Atualmente, curso Análise e
+                    Desenvolvimento de Sistemas (ADS) na FAMETRO, ampliando meus conhecimentos em desenvolvimento de
+                    software e arquitetura de sistemas.
+                    <br />
+                    <br />
+                    Profissionalmente, atuo na área de Tecnologia da Informação (TI) na Norte Auto Peças, onde tenho a
+                    oportunidade de aplicar na prática meus conhecimentos técnicos, oferecendo suporte, otimizando
+                    processos e contribuindo para a infraestrutura tecnológica da empresa.
+                    <br />
+                    <br />
+                    Além disso, também desenvolvo projetos próprios como freelancer, voltados ao desenvolvimento web.
+                    Trabalho com HTML, CSS, JavaScript, TypeScript e PHP, criando interfaces modernas, responsivas e
+                    funcionais. Gosto de unir design, lógica e criatividade para transformar ideias em soluções reais,
+                    sempre buscando evoluir e aprender algo novo a cada linha de código.
+                    <br />
+                    <br />
+                    Meu objetivo é me tornar um desenvolvedor Front-End completo, capaz de criar experiências digitais
+                    únicas, intuitivas e de alta performance. Sou uma pessoa dedicada, curiosa e proativa, que acredita
+                    no aprendizado constante e no poder da tecnologia para transformar o mundo.
+            </div>
+        </div>
+
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+
+            <div class="projetos-card" onclick="window.open('https://github.com/MateusBritoC/FIXDAT', '_blank')">
+                <img src="./img/FixDatPort.png" alt="FixDat" class="projetos-imagem">
+
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">FixDat</h3>
+                    <p class="paragrafo-projetos">App estilo Uber para encontrar oficinas, guinchos e mecânicos
+                        próximos, com foco em praticidade, facilidade de uso e interface intuitiva baseada em
+                        geolocalização.</p>
+                </div>
+
+            </div>
+
+            <div class="projetos-card" onclick="window.open('https://github.com/MateusBritoC/quinze-casino-royal.git', '_blank')">
+                <img src="./img/casino_convite.png" alt="Casino_convite" class="projetos-imagem">
+
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Convite 15 anos</h3>
+                    <p class="paragrafo-projetos">Site de confirmação de presença (RSVP) desenvolvido para um evento de
+                        15 anos. Possui design responsivo, formulário integrado para envio das confirmações, além de
+                        informações sobre a localização do evento e sugestões de presentes.</p>
+                </div>
+
+            </div>
+
+            <div class="projetos-card" onclick="window.open('https://github.com/MateusBritoC/StickerSmash.git', '_blank')">
+                <img src="./img/StickerSmash.png" alt="StickerSmash" class="projetos-imagem">
+
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">StickerSmash</h3>
+                    <p class="paragrafo-projetos">App desenvolvido com React Native e Expo que permite ao usuário
+                        escolher uma imagem da galeria, adicionar stickers/emojis e salvar o resultado na galeria do
+                        dispositivo. Focado em uma interface simples, intuitiva e fácil de usar.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhatsapp(event)">
+  <div class="grupo-form">
+    <input 
+      type="text" 
+      placeholder="Nome" 
+      class="campo-form" 
+      id="nome" 
+      required
+    >
+  </div>
+
+  <div class="grupo-form">
+    <textarea 
+      class="campo-form" 
+      placeholder="Digite sua mensagem" 
+      rows="5" 
+      id="mensagem" 
+      required
+    ></textarea>
+  </div>
+
+  <button type="submit" class="botao-form">
+    Enviar WhatsApp
+  </button>
+</form>
+
+        <div class="redes-sociais">
+            <img src="./img/linkedin.png" alt="LinkedIn" class="linkedin" onclick="window.open('https://www.linkedin.com/in/mateus-brito-7aaba0239/', '_blank')">
+            <img src="./img/github.png" alt="GitHub" class="github" onclick="window.open('https://github.com/MateusBritoC', '_blank')">
+        </div>
+    </section>
+
+    <script>
+  function enviarWhatsapp(event) {
+    event.preventDefault();
+
+    const nome = document.getElementById('nome').value.trim();
+    const mensagem = document.getElementById('mensagem').value.trim();
+    const telefone = '5592993083534'; // número com DDI + DDD + número
+
+    if (!nome || !mensagem) {
+      alert('Por favor, preencha o nome e a mensagem antes de enviar.');
+      return;
+    }
+
+    // Monta a mensagem
+    const texto = `Olá! Me chamo ${nome}.%0A${mensagem}`;
+    const url = `https://wa.me/${telefone}?text=${texto}`;
+
+    // Redireciona diretamente (mais compatível com WhatsApp Web e Mobile)
+    window.location.href = url;
+  }
+</script>
+
+</body>
+
+</html>
