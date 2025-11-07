@@ -334,4 +334,148 @@ h1 {
     transition: transform 0.3s ease;
 }
 
-    
+/* ===================== */
+/* RESPONSIVIDADE MOBILE */
+/* ===================== */
+@media (max-width: 768px) {
+
+  /* Ajuste da navegação */
+  .navegacao {
+    padding: 1rem;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .menu-link {
+    font-size: 0.9rem;
+  }
+
+  /* Cabeçalho (foto e título) */
+  .cabecalho {
+    padding-top: 6rem; /* evita que o menu fixe por cima */
+  }
+
+  .foto-perfil {
+    width: 160px;
+    height: 160px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .cabecalho-sub-titulo {
+    font-size: 1.1rem;
+  }
+
+  .linguaguens {
+    gap: 1rem;
+    height: 40px;
+  }
+
+  .linguaguens img {
+    width: 35px;
+    height: 35px;
+  }
+
+  /* Seção Sobre */
+  .sobre {
+    padding: 4rem 1rem;
+  }
+
+  .sobre-caixa {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sobre-image {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+
+  .sobre-caixa-paragrafo {
+    padding: 1.5rem;
+  }
+
+  .sobre-paragrafo {
+    font-size: 0.95rem;
+  }
+
+  .sobre-titulo {
+    font-size: 2rem;
+  }
+
+  /* Seção Projetos */
+  .projetos {
+    padding: 4rem 1rem;
+  }
+
+  .projetos-titulo {
+    font-size: 2rem;
+  }
+
+  .projetos-imagem {
+    height: 180px;
+  }
+
+  .projetos-card {
+    transform: none;
+  }
+
+  /* Formulário de Contato */
+  .formulario-contato {
+    padding: 1.5rem;
+  }
+
+  .campo-form {
+    font-size: 0.95rem;
+  }
+
+  .botao-form {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+
+  /* Ícones de redes sociais */
+  .redes-sociais {
+    gap: 1.5rem;
+  }
+
+  .redes-sociais img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Telas muito pequenas (celulares < 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .cabecalho-sub-titulo {
+    font-size: 1rem;
+  }
+
+  .sobre-paragrafo {
+    font-size: 0.9rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .projetos-caixa {
+    grid-template-columns: 1fr;
+  }
+
+  .formulario-contato {
+    width: 95%;
+  }
+}
