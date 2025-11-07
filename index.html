@@ -11,21 +11,23 @@
 <body>
 
     <nav class="navegacao">
-        <ul class="menu">
-            <li>
-                <a href="#inicio" class="menu-link">Início</a>
-            </li>
-            <li>
-                <a href="#sobre" class="menu-link">Sobre</a>
-            </li>
-            <li>
-                <a href="#projetos" class="menu-link">Projetos</a>
-            </li>
-            <li>
-                <a href="#contatos" class="menu-link">Contato</a>
-            </li>
-        </ul>
+        <div class="nav-container">
+            <h2 class="logo">Mateus</h2>
+
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+
+            <ul class="menu" id="menu">
+                <li><a href="#inicio" class="menu-link">Início</a></li>
+                <li><a href="#sobre" class="menu-link">Sobre</a></li>
+                <li><a href="#projetos" class="menu-link">Projetos</a></li>
+                <li><a href="#contatos" class="menu-link">Contato</a></li>
+            </ul>
+        </div>
     </nav>
+
+
 
     <main id="inicio" class="cabecalho">
         <img src="./img/ImagePerfil.jpg" alt="Foto de perfil" class="foto-perfil">
@@ -95,7 +97,8 @@
 
             </div>
 
-            <div class="projetos-card" onclick="window.open('https://github.com/MateusBritoC/quinze-casino-royal.git', '_blank')">
+            <div class="projetos-card"
+                onclick="window.open('https://github.com/MateusBritoC/quinze-casino-royal.git', '_blank')">
                 <img src="./img/casino_convite.png" alt="Casino_convite" class="projetos-imagem">
 
                 <div class="caixa-textos-projetos">
@@ -107,7 +110,8 @@
 
             </div>
 
-            <div class="projetos-card" onclick="window.open('https://github.com/MateusBritoC/StickerSmash.git', '_blank')">
+            <div class="projetos-card"
+                onclick="window.open('https://github.com/MateusBritoC/StickerSmash.git', '_blank')">
                 <img src="./img/StickerSmash.png" alt="StickerSmash" class="projetos-imagem">
 
                 <div class="caixa-textos-projetos">
@@ -126,58 +130,61 @@
     <section id="contatos" class="contatos">
         <h2 class="contatos-titulo">Entre em contato</h2>
         <form class="formulario-contato" id="formulario" onsubmit="enviarWhatsapp(event)">
-  <div class="grupo-form">
-    <input 
-      type="text" 
-      placeholder="Nome" 
-      class="campo-form" 
-      id="nome" 
-      required
-    >
-  </div>
+            <div class="grupo-form">
+                <input type="text" placeholder="Nome" class="campo-form" id="nome" required>
+            </div>
 
-  <div class="grupo-form">
-    <textarea 
-      class="campo-form" 
-      placeholder="Digite sua mensagem" 
-      rows="5" 
-      id="mensagem" 
-      required
-    ></textarea>
-  </div>
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua mensagem" rows="5" id="mensagem"
+                    required></textarea>
+            </div>
 
-  <button type="submit" class="botao-form">
-    Enviar WhatsApp
-  </button>
-</form>
+            <button type="submit" class="botao-form">
+                Enviar WhatsApp
+            </button>
+        </form>
 
         <div class="redes-sociais">
-            <img src="./img/linkedin.png" alt="LinkedIn" class="linkedin" onclick="window.open('https://www.linkedin.com/in/mateus-brito-7aaba0239/', '_blank')">
-            <img src="./img/github.png" alt="GitHub" class="github" onclick="window.open('https://github.com/MateusBritoC', '_blank')">
+            <img src="./img/linkedin.png" alt="LinkedIn" class="linkedin"
+                onclick="window.open('https://www.linkedin.com/in/mateus-brito-7aaba0239/', '_blank')">
+            <img src="./img/github.png" alt="GitHub" class="github"
+                onclick="window.open('https://github.com/MateusBritoC', '_blank')">
         </div>
     </section>
 
     <script>
-  function enviarWhatsapp(event) {
-    event.preventDefault();
+        function enviarWhatsapp(event) {
+            event.preventDefault();
 
-    const nome = document.getElementById('nome').value.trim();
-    const mensagem = document.getElementById('mensagem').value.trim();
-    const telefone = '5592993083534'; // número com DDI + DDD + número
+            const nome = document.getElementById('nome').value.trim();
+            const mensagem = document.getElementById('mensagem').value.trim();
+            const telefone = '5592993083534'; // número com DDI + DDD + número
 
-    if (!nome || !mensagem) {
-      alert('Por favor, preencha o nome e a mensagem antes de enviar.');
-      return;
-    }
+            if (!nome || !mensagem) {
+                alert('Por favor, preencha o nome e a mensagem antes de enviar.');
+                return;
+            }
 
-    // Monta a mensagem
-    const texto = `Olá! Me chamo ${nome}.%0A${mensagem}`;
-    const url = `https://wa.me/${telefone}?text=${texto}`;
+            // Monta a mensagem
+            const texto = `Olá! Me chamo ${nome}.%0A${mensagem}`;
+            const url = `https://wa.me/${telefone}?text=${texto}`;
 
-    // Redireciona diretamente (mais compatível com WhatsApp Web e Mobile)
-    window.location.href = url;
-  }
-</script>
+            // Redireciona diretamente (mais compatível com WhatsApp Web e Mobile)
+            window.location.href = url;
+        }
+    </script>
+
+    <script>
+        // Função para abrir/fechar o menu no mobile
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('ativo');
+            menuToggle.classList.toggle('aberto');
+        });
+    </script>
+
 
 </body>
 
